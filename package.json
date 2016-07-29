@@ -1,7 +1,7 @@
 {
-  "name": "ga-wdi-boston.ember-auth",
+  "name": "ga-wdi-boston.capstone-client",
   "version": "0.0.0",
-  "description": "Small description for ga-wdi-boston.ember-auth goes here",
+  "description": "Small description for ga-wdi-boston.capstone-client goes here",
   "private": true,
   "directories": {
     "doc": "doc",
