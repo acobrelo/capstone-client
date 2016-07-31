@@ -1,7 +1,12 @@
 import Ember from 'ember';
+import { storageFor } from 'ember-local-storage';
 
 export default Ember.Route.extend({
-//  model (params) {
-  //  return this.get('store').findRecord('profile', params.id);
-//  },
+  credentials: storageFor('auth'),
+
+  model () {
+    let id = this.get('credentials.id');
+    console.log("whyy " + id );
+    return this.get('store').findRecord('profile', id);
+  },
 });

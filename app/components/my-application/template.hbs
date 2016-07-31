@@ -6,8 +6,7 @@
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
-        <li>{{#link-to "profiles"}}Profiles{{/link-to}}</li>
-        <li><a {{action "seeProfile"}}>My Profile</a></li>
+        <li>{{#link-to "profile"}}Profiles{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -28,10 +27,6 @@
   {{action "click"}}>
   click
 </button>
-<p>{{#link-to "profiles"}}Profiles{{/link-to}}</p>
-
-
-
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}

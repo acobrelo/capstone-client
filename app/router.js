@@ -10,8 +10,8 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('profiles');
-  this.route('profile', { path: '/profiles/:id'} );
+  this.route('profiles', { path: '/profiles/:id' });
+  this.route('profile');
 });
 
 export default Router;
