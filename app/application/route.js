@@ -7,7 +7,6 @@ export default Ember.Route.extend({
 
   actions: {
     click () {
-      this.transitionTo('profiles');
       //this.sendAction('click');
       console.log("ok");
     },
