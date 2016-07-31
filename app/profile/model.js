@@ -1,0 +1,7 @@
+import DS from 'ember-data';
+
+export default DS.Model.extend({
+  location: DS.attr('string'),
+  aliases: DS.attr('string'),
+  biography: DS.attr('string')
+});

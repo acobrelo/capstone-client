@@ -4,7 +4,14 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
 
+
   actions: {
+    click () {
+      this.transitionTo('profiles');
+      //this.sendAction('click');
+      console.log("ok");
+    },
+
     signOut () {
       this.get('auth').signOut()
       .then(() => this.transitionTo('sign-in'))

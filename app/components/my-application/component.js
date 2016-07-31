@@ -10,5 +10,10 @@ export default Ember.Component.extend({
     signOut () {
       this.sendAction('signOut');
     },
+
+    click () {
+      this.sendAction('click');
+      //console.log('click');
+    }
   },
 });
