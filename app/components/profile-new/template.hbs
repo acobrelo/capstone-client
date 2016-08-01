@@ -1,0 +1,21 @@
+<h2>Welcome, {{user}}</h2>
+<p>Please fill out some basic information to
+  continue! You can edit this any time.</p>
+
+<form {{action "submit" on="submit"}}>
+  <label for="location">Location</label>
+  {{input placeholder="eg. New York, NY"
+          type="text"
+          id="location"
+          value=profile.location}}
+
+  <label for="biography">Biography</label>
+  {{input placeholder="Tell us about yourself"
+          type="text"
+          id="biography"
+          value=profile.biography}}
+
+<button type="submit" class="btn btn-primary">
+  Submit</button>
+
+</form>

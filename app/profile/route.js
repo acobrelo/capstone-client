@@ -4,9 +4,16 @@ import { storageFor } from 'ember-local-storage';
 export default Ember.Route.extend({
   credentials: storageFor('auth'),
 
-  model () {
-    let id = this.get('credentials.id');
-    console.log("whyy " + id );
-    return this.get('store').findRecord('profile', id);
+  model (params) {
+    console.log("whyy " + params.profile_id);
+    return this.get('store').findRecord('profile', params.profile_id);
   },
+
+  // actions: {
+  //   create () {
+  //     let profile = this.get('store').createRecord('profile');
+  //     profile.save();
+  //     console.log("done");
+  //   },
+  // },
 });

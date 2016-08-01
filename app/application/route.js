@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     click () {
       //this.sendAction('click');
-      console.log("ok");
+      console.log("click");
     },
 
     signOut () {

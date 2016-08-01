@@ -15,6 +15,13 @@ export default Ember.Component.extend({
     click () {
       this.sendAction('click');
       //console.log('click');
-    }
+    },
+
+    // newProfile () {
+    //   let id = this.get('id');
+    //   console.log(id);
+    //   this.transitionTo('profiles.new');
+    //   // this.sendAction('newProfile', id);
+    // }
   },
 });

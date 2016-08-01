@@ -4,5 +4,9 @@
 {{#each model as |user|}}
   <li>{{user.email}}</li>
   <li>{{user.id}}</li>
+  <button class="btn btn-xs btn-danger"
+    {{action "bleh"}}>
+    check
+  </button>
 {{/each}}
 </ul>
