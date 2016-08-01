@@ -8,9 +8,7 @@ export default Ember.Component.extend({
   },
 
   actions: {
-    // check () {
-    //   this.sendAction('check');
-    // },
+
     submit () {
       let data = this.get('profile');
       this.sendAction('submit', data);
