@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('profile', { path: '/profiles/:profile_id' });
   this.route('profiles/update');
   this.route('profiles/new');
+  this.route('projects');
 });
 
 //   this.route('profiles', function() {
