@@ -14,22 +14,21 @@
           value=project.genre}}
 
   <label for="description">Description:</label><br>
-  {{textarea placeholder="If made public, this is the description others will see"
+  {{input placeholder="If made public, this is the description others will see"
           id="description"
-          cols=default
-          rows="5"
+          type="text"
           value=project.description}} <br>
 
-  <label for="target_finish">Target Finish:</label>
+  <label for="targetFinish">Target Finish:</label>
   <p>Set a goal date for completion</p>
   {{input type="date"
-          id="target_finish"
-          value=project.target_finish}}
+          id="targetFinish"
+          value=project.targetFinish}}
 
 <button type="submit" class="btn btn-primary">
   Save</button>
 
-</form> <br>
 
 <button {{action "cancel"}} class="btn btn-primary">
   Cancel</button>
+</form> <br>

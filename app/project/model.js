@@ -5,6 +5,9 @@ export default DS.Model.extend({
   genre: DS.attr('string'),
   description: DS.attr('string'),
   completed: DS.attr('boolean'),
-  started_on: DS.attr('date'),
-  target_finish: DS.attr('date'),
+  startedOn: DS.attr('date', {
+    defaultValue() { return new Date(); }
+  }),
+  targetFinish: DS.attr('date'),
+  created_on: DS.attr(),
 });
