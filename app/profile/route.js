@@ -12,10 +12,7 @@ export default Ember.Route.extend({
 
   actions: {
     edit () {
-      console.log('edit');
-      let params = this.get('credentials.id');
-      console.log(params);
-      this.transitionTo('profiles/edit');
+      this.transitionTo('profiles/update');
     },
   }
 });

@@ -1,1 +1,28 @@
-{{yield}}
+<h4>Press 'save' once you've made your changes</h4>
+
+  <form {{action "submit" on="submit"}}>
+  <label for="username">Artist Name</label>
+  {{input placeholder="Put the name you prefer to go by"
+          type="text"
+          id="username"
+          value=profile.username}}
+
+  <label for="location">Location</label>
+  {{input placeholder="eg. New York, NY"
+          type="text"
+          id="location"
+          value=profile.location}}
+
+  <label for="biography">Biography</label>
+  {{input placeholder="Tell us about yourself"
+          type="text"
+          id="biography"
+          value=profile.biography}}
+
+<button type="submit" class="btn btn-primary">
+  Save</button>
+
+</form>
+
+<button {{action "cancel"}} class="btn btn-primary">
+  Cancel</button>
