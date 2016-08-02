@@ -5,9 +5,8 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   actions: {
-    click () {
-      //this.sendAction('click');
-      console.log("click");
+    seeProfile (params) {
+      this.transitionTo('profile', params);
     },
 
     signOut () {

@@ -12,16 +12,9 @@ export default Ember.Component.extend({
       this.sendAction('signOut');
     },
 
-    click () {
-      this.sendAction('click');
-      //console.log('click');
-    },
-
-    // newProfile () {
-    //   let id = this.get('id');
-    //   console.log(id);
-    //   this.transitionTo('profiles.new');
-    //   // this.sendAction('newProfile', id);
-    // }
+    seeProfile () {
+      let params = this.get('id');
+      this.sendAction('seeProfile', params);
+    }
   },
 });

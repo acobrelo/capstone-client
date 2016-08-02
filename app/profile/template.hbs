@@ -1,5 +1,22 @@
-{{model.location}}
+<!-- {{model.location}}
 {{model.biography}}
 {{model.user_id}}
+
+{{my-application seeProfile='seeProfile'}}
+
 <button {{action "edit"}} class="btn btn-primary">
+  Edit</button> -->
+<div>
+<h1>{{model.username}}</h1>
+<label for="location">Location:</label>
+{{model.location}}
+<label for="biography">Biography:</label>
+{{model.biography}}
+<label for="aliases">Aliases:</label>
+{{model.aliases}}
+<button type="submit" {{action "edit"}} class="btn btn-primary">
   Edit</button>
+
+<h2>Public Projects</h2>
+</div>
+{{outlet}}

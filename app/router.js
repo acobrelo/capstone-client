@@ -11,7 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('profile', { path: '/profiles/:profile_id' });
-  this.route('profile/edit');
+  this.route('profiles/edit');
   this.route('profiles');
   this.route('profiles/new');
 });
