@@ -15,6 +15,7 @@ Router.map(function () {
   this.route('profiles/update');
   this.route('profiles/new');
   this.route('projects');
+  this.route('project', { path: '/projects/:id'});
 });
 
 //   this.route('profiles', function() {

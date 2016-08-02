@@ -22,11 +22,14 @@
   </div>
 </nav>
 
+{{yield}}
+
 <h1>Encore!</h1>
 <div>
   <ul>
     {{#if isAuthenticated}}
       <li>New Project</li>
+      <li>{{#link-to 'projects'}}All Projects{{/link-to}}</li>
       <li>In Progress Projects</li>
       <li>Completed Projects</li>
     {{/if}}
