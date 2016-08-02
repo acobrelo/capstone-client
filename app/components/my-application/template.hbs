@@ -5,7 +5,8 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li><a {{action "seeProfile"}}>PRO</a></li>
+        <li><a href="profiles" {{action "seeProfile"}}>Profile</a></li>
+        <li>{{#link-to 'profile' '2'}}Pro{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -21,10 +22,22 @@
   </div>
 </nav>
 
+<h1>Encore!</h1>
+<div>
+  <ul>
+    {{#if isAuthenticated}}
+      <li>New Project</li>
+      <li>In Progress Projects</li>
+      <li>Completed Projects</li>
+    {{/if}}
+  </ul>
+  <h2>All Projects</h2>
+</div>
+
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
 
-<div class="col-md-8 col-md-offset-2">
+<!-- <div class="col-md-8 col-md-offset-2">
   {{outlet}}
-</div>
+</div> -->
