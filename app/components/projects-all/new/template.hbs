@@ -1,0 +1,35 @@
+<h4>Press 'save' once you've made your changes</h4>
+
+  <form {{action "save" on="submit"}}>
+  <label for="name">Project Title:</label>
+  {{input placeholder="Give it a working title"
+          type="text"
+          id="name"
+          value=project.name}}
+
+  <label for="genre">Type:</label>
+  {{input placeholder="What medium? eg. dance, silks, music"
+          type="text"
+          id="genre"
+          value=project.genre}}
+
+  <label for="description">Description:</label><br>
+  {{textarea placeholder="If made public, this is the description others will see"
+          id="description"
+          cols=default
+          rows="5"
+          value=project.description}} <br>
+
+  <label for="target_finish">Target Finish:</label>
+  <p>Set a goal date for completion</p>
+  {{input type="date"
+          id="target_finish"
+          value=project.target_finish}}
+
+<button type="submit" class="btn btn-primary">
+  Save</button>
+
+</form> <br>
+
+<button {{action "cancel"}} class="btn btn-primary">
+  Cancel</button>
