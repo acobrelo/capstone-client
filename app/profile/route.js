@@ -9,11 +9,9 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('profile', params.profile_id);
   },
 
-  // actions: {
-  //   create () {
-  //     let profile = this.get('store').createRecord('profile');
-  //     profile.save();
-  //     console.log("done");
-  //   },
-  // },
+  actions: {
+    edit () {
+      console.log('edit');
+    },
+  }
 });

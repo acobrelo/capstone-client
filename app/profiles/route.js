@@ -4,8 +4,8 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   user: Ember.computed.alias('auth.credentials.email'),
 
-   model () {
-     return this.get('store').findAll('profile');
+   model (params) {
+     return this.get('store').findRecord('profile', params.profile_id);
    },
 
   actions: {
