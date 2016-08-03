@@ -8,6 +8,9 @@ export default Ember.Component.extend({
     location: null,
     biography: null,
     username: null,
+    //user: {
+      //user_id: Ember.computed.alias('auth.credentials.id')
+    //}
   },
 
   actions: {
