@@ -13,13 +13,13 @@ Router.map(function () {
   this.route('profile', { path: '/profiles/:profile_id' });
   this.route('profiles');
   this.route('profiles/update');
-  this.route('profiles/new');
   this.route('projects');
   this.route('projects/done');
   this.route('projects/ongoing');
   this.route('projects/new');
   this.route('project', { path: '/projects/:id' });
   this.route('project/edit', { path: '/projects/:id/edit'});
+  this.route('notebook');
 });
 
 //   this.route('profiles', function() {

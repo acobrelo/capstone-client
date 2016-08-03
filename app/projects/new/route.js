@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       let project = this.get('store').createRecord('project', data);
       project.save()
       .then((result) => {
-        console.log(result.name);
+        console.log(result.id);
       });
       this.transitionTo('projects');
     },
