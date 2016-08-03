@@ -29,8 +29,8 @@
     {{#if isAuthenticated}}
       <li>{{#link-to 'projects/new'}}New Project{{/link-to}}</li>
       <li>{{#link-to 'projects'}}All Projects{{/link-to}}</li>
-      <li>In Progress Projects</li>
-      <li>Completed Projects</li>
+      <li>{{#link-to 'projects/ongoing'}}In Progress Projects{{/link-to}}</li>
+      <li>{{#link-to 'projects/done'}}Completed Projects{{/link-to}}</li>
     {{/if}}
   </ul>
   <h2>All Projects</h2>

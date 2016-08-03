@@ -3,12 +3,6 @@ import { storageFor } from 'ember-local-storage';
 
 export default Ember.Route.extend({
   credentials: storageFor('auth'),
-  // queryParams: {
-  //   name: {
-  //     refreshModel: true
-  //   }
-  // },
-
 
    model () {
      let id = this.get('credentials.id');

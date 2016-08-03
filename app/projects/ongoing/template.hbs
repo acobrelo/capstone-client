@@ -1,0 +1,8 @@
+<ul>
+{{#each model.projects as |project|}}
+  {{#unless project.completed}}
+    {{projects-all project=project
+                   view="view"}}
+  {{/unless}}
+{{/each}}
+</ul>
