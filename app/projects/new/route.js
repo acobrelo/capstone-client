@@ -7,8 +7,6 @@ export default Ember.Route.extend({
   actions: {
     submit (data) {
       let project = this.get('store').createRecord('project', data);
-      //let data.profile_id = this.get('credentials.id');
-      //console.log(data.profile_id);
       project.save()
       .then((result) => {
         //let id = result.id;

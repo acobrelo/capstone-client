@@ -23,7 +23,6 @@ export default Ember.Route.extend({
 
     newProject () {
       this.transitionTo('projects/new');
-      console.log('hi');
     }
   }
 });

@@ -27,7 +27,7 @@
 <div>
   <ul>
     {{#if isAuthenticated}}
-      <li>New Project</li>
+      <li>{{#link-to 'projects/new'}}New Project{{/link-to}}</li>
       <li>{{#link-to 'projects'}}All Projects{{/link-to}}</li>
       <li>In Progress Projects</li>
       <li>Completed Projects</li>
