@@ -7,9 +7,12 @@ export default Ember.Route.extend({
     },
 
     edit (model) {
-      let id = model.id;
       this.transitionTo('project/edit', model);
-      console.log(id);
+    },
+
+    delete (model) {
+      model.destroyRecord();
+      this.transitionTo('projects');
     }
   }
 });
