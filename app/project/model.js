@@ -10,6 +10,6 @@ export default DS.Model.extend({
   }),
   targetFinish: DS.attr('date'),
   created_on: DS.attr(),
-  profile: DS.belongsTo('profile'),
-  //profile_id: DS.attr(),
+  //profile: DS.belongsTo('profile'),
+  profile_id: DS.attr(),
 });

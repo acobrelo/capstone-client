@@ -12,11 +12,11 @@ export default Ember.Component.extend({
   },
 
   actions: {
-    save () {
+    submit () {
       let data = this.get('project');
-      //data.profile_id = this.get('credentials.id');
-      //console.log(data.profile_id);
-      this.sendAction('save', data);
+      data.profile_id = this.get('credentials.id');
+      console.log(data.profile_id);
+      this.sendAction('submit', data);
       this.set('project.name', null);
       this.set('project.genre', null);
       this.set('project.description', null);
