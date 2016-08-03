@@ -10,13 +10,10 @@ export default Ember.Route.extend({
         console.log(result.id);
         this.transitionTo('project', result);
       });
-      //this.transitionTo('project', project.id);
-      // .then(() => {
-      //   this.transitionTo('projects');
-      // });
     },
 
     save (project) {
+      console.log(project.name);
       project.save();
       this.transitionTo('projects');
     }

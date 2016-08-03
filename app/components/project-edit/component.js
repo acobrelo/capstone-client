@@ -8,8 +8,15 @@ export default Ember.Component.extend({
     },
 
     save () {
+      console.log(this.get('project.completed'));
       let project = this.get('project');
       this.sendAction('save', project);
-    }
+    },
+
+     toggleStatus () {
+       let project = this.get('project');
+       project.toggleProperty('completed');
+       return this.get('project');
+     }
   }
 });

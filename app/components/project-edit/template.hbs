@@ -31,7 +31,8 @@
   <label for="completed">Completed?</label>
   {{input type="checkbox"
           name="completed"
-          checked=completed}} <br>
+          change=(action "toggleStatus")
+          checked=project.completed}} <br>
 
 <button type="submit" class="btn btn-primary">
   Save</button>

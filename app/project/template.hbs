@@ -3,7 +3,12 @@
 <label for="description">Description:</label> {{model.description}} <br>
 <label for="started_on">Started On:</label> {{model.startedOn}} <br>
 <label for="targetFinish">Target Finish:</label> {{model.targetFinish}} <br>
-<label for="completed">Status:</label> {{model.completed}} <br>
+<label for="completed"> Status: </label>
+  {{#if model.completed}}
+    Completed
+    {{else}}
+    In progress
+  {{/if}} <br>
 
 <button {{action "edit" model}} class="btn btn-primary">
   Edit</button>
@@ -11,5 +16,5 @@
 <button {{action "back"}} class="btn btn-primary">
   Back</button>
 
-  <button {{action "delete" model}} class="btn btn-primary">
-    Delete</button>
+<button {{action "delete" model}} class="btn btn-primary">
+  Delete</button>

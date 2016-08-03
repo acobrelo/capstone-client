@@ -5,6 +5,7 @@ export default DS.Model.extend({
   genre: DS.attr('string'),
   description: DS.attr('string'),
   completed: DS.attr('boolean'),
+  //inProgress: DS.attr('boolean'),
   startedOn: DS.attr('date', {
     defaultValue() { return new Date(); }
   }),
@@ -12,4 +13,5 @@ export default DS.Model.extend({
   created_on: DS.attr(),
   //profile: DS.belongsTo('profile'),
   profile_id: DS.attr(),
+  // status: Ember.computed
 });
