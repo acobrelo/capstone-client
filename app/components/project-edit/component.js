@@ -8,7 +8,6 @@ export default Ember.Component.extend({
     },
 
     save () {
-      console.log(this.get('project.completed'));
       let project = this.get('project');
       this.sendAction('save', project);
     },
@@ -16,6 +15,12 @@ export default Ember.Component.extend({
      toggleStatus () {
        let project = this.get('project');
        project.toggleProperty('completed');
+       return this.get('project');
+     },
+
+     togglePublic () {
+       let project = this.get('project');
+       project.toggleProperty('public');
        return this.get('project');
      }
   }

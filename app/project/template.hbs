@@ -9,6 +9,12 @@
     {{else}}
     In progress
   {{/if}} <br>
+<label for="public">Privacy: </label>
+  {{#if model.public}}
+  Public (appears on profile)
+  {{else}}
+  Private (only I can see it)
+  {{/if}} <br>
 
 <button {{action "edit" model}} class="btn btn-primary">
   Edit</button>

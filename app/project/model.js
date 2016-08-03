@@ -11,4 +11,5 @@ export default DS.Model.extend({
   targetFinish: DS.attr('date'),
   created_on: DS.attr(),
   profile_id: DS.attr(),
+  public: DS.attr('boolean'),
 });

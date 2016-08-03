@@ -11,7 +11,6 @@ export default Ember.Route.extend({
 
   actions: {
     view (id) {
-      console.log(id);
       this.transitionTo('project', id);
     },
 

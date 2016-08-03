@@ -1,13 +1,20 @@
 <div>
 <h1>{{model.username}}</h1>
 <label for="location">Location:</label>
-{{model.location}}
+{{model.location}} <br>
 <label for="biography">Biography:</label>
-{{model.biography}}
+{{model.biography}} <br>
 <label for="aliases">Aliases:</label>
-{{model.aliases}}
+{{model.aliases}} <br>
 <button type="submit" {{action "edit"}} class="btn btn-primary">
   Edit</button>
 
 <h2>Public Projects</h2>
+{{#each model.projects as |project|}}
+  {{#if project.public}}
+    {{projects-all/public project=project}}
+  {{/if}}
+{{/each}}
+
+{{outlet}}
 </div>

@@ -1,0 +1,16 @@
+<div>
+<label for="name">Project Title:</label>
+{{project.name}} <br>
+<label for="genre">Genre:</label>
+{{project.genre}} <br>
+<label for="description">Description:</label>
+{{project.description}} <br>
+<label for="completed"> Status: </label>
+  {{#if model.completed}}
+    Completed
+    {{else}}
+    In progress
+  {{/if}} <br>
+<label for="started_on">Started On:</label>
+{{project.startedOn}} <br>
+</div>

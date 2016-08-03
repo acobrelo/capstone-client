@@ -34,6 +34,13 @@
           change=(action "toggleStatus")
           checked=project.completed}} <br>
 
+<label for="public">Public Project</label>
+<p>By default, your projects are private. Public projects will appear on your profile and others can view basic information on it.</p>
+  {{input type="checkbox"
+          name="public"
+          change=(action "togglePublic")
+          checked=project.public}} <br>
+
 <button type="submit" class="btn btn-primary">
   Save</button>
 
