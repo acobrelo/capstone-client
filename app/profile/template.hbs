@@ -1,11 +1,3 @@
-<!-- {{model.location}}
-{{model.biography}}
-{{model.user_id}}
-
-{{my-application seeProfile='seeProfile'}}
-
-<button {{action "edit"}} class="btn btn-primary">
-  Edit</button> -->
 <div>
 <h1>{{model.username}}</h1>
 <label for="location">Location:</label>
@@ -14,6 +6,9 @@
 {{model.biography}}
 <label for="aliases">Aliases:</label>
 {{model.aliases}}
+{{#each model.projects as |project|}}
+  {{project.name}}
+{{/each}}
 <button type="submit" {{action "edit"}} class="btn btn-primary">
   Edit</button>
 

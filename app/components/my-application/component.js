@@ -15,6 +15,6 @@ export default Ember.Component.extend({
     seeProfile () {
       let params = this.get('id');
       this.sendAction('seeProfile', params);
-    }
+    },
   },
 });

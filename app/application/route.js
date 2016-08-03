@@ -4,6 +4,11 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
 
+  // model () {
+  //   //let params = this.get('auth.credentials');
+  //   return this.get('store').findRecord('profile', 1);
+  // },
+
   actions: {
     seeProfile (params) {
       this.transitionTo('profile', params);

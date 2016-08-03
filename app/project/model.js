@@ -12,4 +12,6 @@ export default DS.Model.extend({
   created_on: DS.attr(),
   //profile: DS.belongsTo('profile'),
   profile_id: DS.attr(),
+
+
 });
