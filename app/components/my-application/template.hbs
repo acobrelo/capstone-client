@@ -21,9 +21,8 @@
   </div>
 </nav>
 
-{{yield}}
 
-<h1>Encore!</h1>
+<h1>Encore</h1>
 <div>
   <ul>
     {{#if isAuthenticated}}
@@ -32,6 +31,11 @@
       <li>{{#link-to 'projects/ongoing'}}In Progress Projects{{/link-to}}</li>
       <li>{{#link-to 'projects/done'}}Completed Projects{{/link-to}}</li>
     {{/if}}
+
+
+      <label for="search">Search</label>
+      {{input type="text" value=profile.username placeholder="Artist's name"}}
+
   </ul>
   <h2>All Projects</h2>
 </div>
