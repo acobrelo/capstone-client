@@ -13,6 +13,10 @@ export default Ember.Route.extend({
     delete (model) {
       model.destroyRecord();
       this.transitionTo('projects');
+    },
+
+    toNotebook (model) {
+      this.transitionTo('notebook', model);
     }
   }
 });

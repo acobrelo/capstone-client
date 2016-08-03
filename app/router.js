@@ -19,7 +19,7 @@ Router.map(function () {
   this.route('projects/new');
   this.route('project', { path: '/projects/:id' });
   this.route('project/edit', { path: '/projects/:id/edit'});
-  this.route('notebook');
+  this.route('notebook', { path: '/notebook/:id'} );
 });
 
 //   this.route('profiles', function() {
