@@ -17,12 +17,12 @@ Router.map(function () {
   this.route('projects/done');
   this.route('projects/ongoing');
   this.route('projects/new');
+  //this.route('item');
   this.route('project', { path: '/projects/:id' });
   this.route('project/edit', { path: '/projects/:id/edit'});
-  this.route('notebook', { path: '/notebook/:id'} );
+  this.route('notebook', { path: '/notebook/:id'});
+  //this.route('notebook/items', { path: '/notebook/:id/tasks'});
+  this.route('items', { path: '/notebook/:id/tasks'});
 });
 
-//   this.route('profiles', function() {
-//    this.route('update');
-//  });
 export default Router;

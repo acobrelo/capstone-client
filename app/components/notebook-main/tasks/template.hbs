@@ -1,0 +1,14 @@
+
+<form {{action "newItem" on="submit"}}>
+  {{input placeholder="New task"
+          id="content"
+          value=item.content}}
+</form>
+{{id}}
+{{notebook}}
+
+<ul>
+  {{#each notebook.items as |item|}}
+    <li>{{item}}</li>
+  {{/each}}
+</ul>

@@ -1,0 +1,17 @@
+{{notebook-main/tasks model=model
+                      id=model.id
+                      newItem="create"}}
+
+hello
+
+<ul>
+  {{#each model.id as |item|}}
+    <li>{{item}}</li>
+  {{/each}}
+</ul>
+
+{{model.id}}
+why
+{{model.profile_id}}
+<button {{action "test" model}} class="btn btn-primary">
+  test</button>

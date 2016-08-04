@@ -17,6 +17,7 @@ export default Ember.Route.extend({
 
     toNotebook (model) {
       this.transitionTo('notebook', model);
+      console.log(model.id);
     }
   }
 });
