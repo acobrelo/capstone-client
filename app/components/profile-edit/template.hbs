@@ -1,4 +1,4 @@
-<h4>Press 'save' once you've made your changes</h4>
+<h4>Enter some information about yourself</h4>
 
   <form {{action "submit" on="submit"}}>
   <label for="username">Artist Name</label>
@@ -19,10 +19,10 @@
           id="biography"
           value=profile.biography}}
 
-<button type="submit" class="btn btn-primary">
-  Save</button>
+<div>
+<span class="col-md-4" {{action "cancel"}}> {{fa-icon "fa-mail-reply fa-2x"}} <br>
+            Cancel</span> <br>
 
+<span class="col-md-4" {{action "submit"}}> {{fa-icon "fa-share fa-2x"}} <br>Save</span>
+</div>
 </form>
-
-<button {{action "cancel"}} class="btn btn-primary">
-  Cancel</button>

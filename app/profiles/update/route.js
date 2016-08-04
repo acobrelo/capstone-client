@@ -12,13 +12,17 @@ export default Ember.Route.extend({
   actions: {
     save (profile) {
       profile.save();
-      console.log('yusss');
       this.transitionTo('profile', profile);
     },
 
     cancel (profile) {
-      this.transitionTo('profile', profile);
-      console.log(profile.id);
+      this.get('store').unloadAll('profile');
+      this.get('store').findRecord('profile', profile.id)
+      .then((result) => {
+        //this.get('store').unloadAll('profile');
+        this.transitionTo('profile', result);
+        console.log(result.id);
+      });
     }
   }
 });

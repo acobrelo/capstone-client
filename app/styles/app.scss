@@ -1,6 +1,36 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+
+body {
+  background-image: url(http://img.wallpaperfolder.com/f/5592AD03F58C/eth-cent-frac34-ntilde.jpg);
+}
+
 .done {
   text-decoration: line-through;
+}
+
+.home li {
+  display: inline;
+  text-align: center;
+  padding-bottom: 30px;
+  color: red;
+}
+
+.outlet {
+  align-content: center;
+  background: white;
+  height: 60%;
+  width: 70%;
+  position: fixed;
+  margin-top: 3%;
+  padding-top: 20px;
+  margin-left: 12%;
+  //margin-right: 10%;
+  opacity: 0.85;
+  overflow: scroll;
+}
+
+.centered {
+  align-self: center;
 }
