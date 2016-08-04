@@ -4,3 +4,9 @@ made it!
 {{model.name}}
 
 {{model.id}}
+
+{{notebook-main/tasks notebook=model
+                      tmp=model.id
+                      newItem="addItem"
+                      click="done"}}
+{{outlet}}

@@ -1,14 +1,16 @@
 
 <form {{action "newItem" on="submit"}}>
   {{input placeholder="New task"
-          id="content"
-          value=item.content}}
+          class="input-group form-control"
+          value=form.content}}
 </form>
+
 {{id}}
-{{notebook}}
+{{notebook.name}}
 
 <ul>
   {{#each notebook.items as |item|}}
-    <li>{{item}}</li>
+  {{notebook-main/task-store item=item}}
+
   {{/each}}
 </ul>

@@ -1,17 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // model (params) {
-  //   return this.get('store').findRecord('notebook', params);
-  // },
+  tmp: null,
 
   actions: {
-    seeTasks (model) {
-      let params = this.get('store').findRecord('notebook', model.id);
-      console.log("whatever");
-      // console.log(model.id);
-      // console.log(model.name);
-      this.transitionTo('notebook/items', params);
+    seeTasks (data) {
+      this.set('tmp', data.id);
+      let params = this.get('store').findRecord('notebook', data.id);
+      params.tmp = this.get('tmp');
+      //console.log(data);
+      console.log('here');
+      console.log("yy" + this.get('tmp'));
+      return this.transitionTo('notebook/items', params);
     }
   }
 });

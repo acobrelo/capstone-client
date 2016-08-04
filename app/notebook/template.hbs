@@ -1,10 +1,13 @@
 
 
-{{notebook-main model=model}}
+{{notebook-main project=model
+                tmp=model.id
+                tasks="seeTasks"
+                bookmarks="seeBookmarks"}}
 {{outlet}}
 
 notebookkkkk
 {{model.id}}
 
-<button {{action "seeTasks" model}} class="btn btn-primary">
-  Tasks</button>
+<!-- <button {{action "seeTasks" model}} class="btn btn-primary">
+  Tasks</button> -->
