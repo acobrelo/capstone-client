@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model (params) {
-    return this.get('store').findRecord('notebook', params);
-  },
+  // model (params) {
+  //   return this.get('store').findRecord('notebook', params);
+  // },
 
   actions: {
     create (data) {

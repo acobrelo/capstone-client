@@ -15,7 +15,9 @@
   {{else}}
   Private (only I can see it)
   {{/if}} <br>
-<label for="notebook"><a {{action "toNotebook" model}}>Notebook</a></label><br>
+
+{{notebook-main project=model}}
+{{outlet}}
 
 <button {{action "edit" model}} class="btn btn-primary">
   Edit</button>

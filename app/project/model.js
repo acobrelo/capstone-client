@@ -12,4 +12,5 @@ export default DS.Model.extend({
   created_on: DS.attr(),
   profile_id: DS.attr(),
   public: DS.attr('boolean'),
+  notebook: DS.belongsTo('notebook')
 });

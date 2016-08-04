@@ -15,9 +15,9 @@ export default Ember.Route.extend({
       this.transitionTo('projects');
     },
 
-    toNotebook (model) {
-      this.transitionTo('notebook', model);
-      console.log(model.id);
+    toNotebook () {
+      this.transitionTo('notebooks');
+      //console.log(model.id);
     }
   }
 });
