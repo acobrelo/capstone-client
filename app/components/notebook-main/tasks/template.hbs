@@ -8,9 +8,20 @@
 {{id}}
 {{notebook.name}}
 
+<h4>To Do</h4>
 <ul>
   {{#each notebook.items as |item|}}
-  {{notebook-main/task-store item=item}}
+    {{#unless item.done}}
+    {{notebook-main/task-store item=item}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
+<h4>Completed</h4>
+<ul>
+  {{#each notebook.items as |item|}}
+    {{#if item.done}}
+    {{notebook-main/task-store item=item}}
+    {{/if}}
   {{/each}}
 </ul>
