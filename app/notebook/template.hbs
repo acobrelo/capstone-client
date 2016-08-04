@@ -1,12 +1,10 @@
 
 
-<ul>
-  <!-- <li>{{#link-to 'items'}}Task List{{/link-to}}</li>
-  <li>To Do List</li> -->
-  <li>{{#link-to 'items'}}To Do List{{/link-to}}</li>
-  <li>Bookmarks</li>
-  {{model.name}}
-</ul>
+{{notebook-main model=model}}
+{{outlet}}
 
 notebookkkkk
 {{model.id}}
+
+<button {{action "seeTasks" model}} class="btn btn-primary">
+  Tasks</button>

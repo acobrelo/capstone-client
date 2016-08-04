@@ -21,6 +21,7 @@ Router.map(function () {
   this.route('project', { path: '/projects/:id' });
   this.route('project/edit', { path: '/projects/:id/edit'});
   this.route('notebook', { path: '/notebooks/:id'});
+  this.route('notebook/items', { path: '/notebooks/:id/tasks'});
   //this.route('notebook/items', { path: '/notebook/:id/tasks'});
   this.route('items');
   this.route('notebooks');
