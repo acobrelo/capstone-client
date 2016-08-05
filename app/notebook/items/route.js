@@ -13,8 +13,6 @@ export default Ember.Route.extend({
       let item = this.get('store').createRecord('item', data);
       item.save();
       this.set('param', data.tmp);
-      console.log(this.get('param'));
-      console.log(this.get('id'));
       return this.get('store').findRecord('notebook', this.get('param'));
     },
   }

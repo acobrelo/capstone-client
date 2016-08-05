@@ -1,11 +1,10 @@
+<h1>My Projects</h1>
+
 <ul>
 {{#each model.projects as |project|}}
   {{projects-all project=project
                   view="view"}}
 {{/each}}
 </ul>
-
-<button {{action "newProject"}} class="btn btn-primary">
-  New Project</button>
 
 {{outlet}}

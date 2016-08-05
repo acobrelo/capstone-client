@@ -1,10 +1,13 @@
+<h1>Edit Project</h1>
+
 <h4>Press 'save' once you've made your changes</h4>
 
-  <form {{action "save" on="submit"}}>
+  <form {{action "submit" on="submit"}}>
   <label for="name">Project Title:</label>
   {{input placeholder="Give it a working title"
           type="text"
           id="name"
+          required=true
           value=project.name}}
 
   <label for="genre">Type:</label>
@@ -16,35 +19,26 @@
   <label for="description">Description:</label><br>
   {{textarea placeholder="If made public, this is the description others will see"
           id="description"
-          cols=default
+          cols="96"
           rows="5"
           value=project.description}} <br>
 
-  <label for="started_on">Started on:</label> {{profile.started_on}} <br>
-
-  <label for="target_finish">Target Finish:</label>
-  <p>Set a goal date for completion</p>
-  {{input type="date"
-          id="target_finish"
-          value=project.target_finish}}
-
-  <label for="completed">Completed?</label>
-  {{input type="checkbox"
+<label for="completed">Completed?</label>
+{{input type="checkbox"
           name="completed"
           change=(action "toggleStatus")
           checked=project.completed}} <br>
 
 <label for="public">Public Project</label>
-<p>By default, your projects are private. Public projects will appear on your profile and others can view basic information on it.</p>
-  {{input type="checkbox"
+{{input type="checkbox"
           name="public"
           change=(action "togglePublic")
           checked=project.public}} <br>
 
-<button type="submit" class="btn btn-primary">
-  Save</button>
+<div class="row">
+<span class="col-md-3 col-md-offset-3" {{action "cancel"}}> {{fa-icon "fa-mail-reply fa-2x"}} <br>
+    Cancel</span>
 
-</form> <br>
-
-<button {{action "cancel"}} class="btn btn-primary">
-  Cancel</button>
+  <span class="col-md-3" {{action "submit"}}> {{fa-icon "fa-share fa-2x"}} <br>Save</span>
+</div>
+</form>

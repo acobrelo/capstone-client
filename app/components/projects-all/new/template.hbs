@@ -1,3 +1,5 @@
+<h1>New Project</h1>
+
 <h4>Press 'save' once you've made your changes</h4>
 
   <form {{action "submit" on="submit"}}>
@@ -19,16 +21,10 @@
           type="text"
           value=project.description}} <br>
 
-  <label for="targetFinish">Target Finish:</label>
-  <p>Set a goal date for completion</p>
-  {{input type="date"
-          id="targetFinish"
-          value=project.targetFinish}}
+<div class="row">
+<span class="col-md-3 col-md-offset-3" {{action "cancel"}}> {{fa-icon "fa-mail-reply fa-2x"}} <br>
+Cancel</span>
 
-<button type="submit" class="btn btn-primary">
-  Save</button>
-
-
-<button {{action "cancel"}} class="btn btn-primary">
-  Cancel</button>
+<span class="col-md-3" {{action "submit"}}> {{fa-icon "fa-share fa-2x"}} <br>Save</span>
+</div>
 </form> <br>

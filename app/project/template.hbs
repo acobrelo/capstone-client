@@ -1,8 +1,11 @@
+<span{{action "edit" model}}> <h1>Project   <a>{{fa-icon "fa-pencil-square-o"}}</a></h1></span>
+
+<br>
+<div class="returned">
 <label for="name">Project Title:</label> {{model.name}} <br>
 <label for="genre">Type:</label> {{model.genre}} <br>
 <label for="description">Description:</label> {{model.description}} <br>
 <label for="started_on">Started On:</label> {{model.startedOn}} <br>
-<label for="targetFinish">Target Finish:</label> {{model.targetFinish}} <br>
 <label for="completed"> Status: </label>
   {{#if model.completed}}
     Completed
@@ -17,13 +20,14 @@
   {{/if}} <br>
 <!--  -->
 
-<label for="notebook">{{#link-to 'notebook' model}}Notebook to model{{/link-to}}</label>
+<label for="notebook">{{#link-to 'notebook' model}}Notebook{{/link-to}}</label><br>
+</div>
 
-<button {{action "edit" model}} class="btn btn-primary">
-  Edit</button>
+<div class="row">
 
-<button {{action "back"}} class="btn btn-primary">
-  Back</button>
+<span class="col-md-3 col-md-offset-3" {{action "back"}}><a> {{fa-icon "fa-mail-reply fa-2x"}} <br>
+  Cancel</a></span>
 
-<button {{action "delete" model}} class="btn btn-primary">
-  Delete</button>
+<span class="col-md-3" {{action "delete" model}}><a>{{fa-icon "trash-o fa-2x"}} <br>
+  Delete</a></span>
+</div>

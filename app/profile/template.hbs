@@ -1,15 +1,11 @@
-<div>
-<h1>{{model.username}}</h1>
+<div class="profile-edit">
+  <span{{action "edit" model}}> <h1>{{model.username}}'s Profile <a>{{fa-icon "fa-pencil-square-o"}}</a></h1></span>
 <label for="location">Location:</label>
 {{model.location}} <br>
 <label for="biography">Biography:</label>
 {{model.biography}} <br>
-<label for="aliases">Aliases:</label>
-{{model.aliases}} <br>
-<button type="submit" {{action "edit"}} class="btn btn-primary">
-  Edit</button>
 
-<h2>Public Projects</h2>
+<h3>Public Projects</h3>
 {{#each model.projects as |project|}}
   {{#if project.public}}
     {{projects-all/public project=project}}
@@ -17,4 +13,7 @@
 {{/each}}
 
 {{outlet}}
+<hr>
+
+<span class="col-md-4 col-md-offset-4">{{#link-to "change-password"}}{{fa-icon "fa-unlock-alt fa-2x"}} <br>Change Password{{/link-to}}</span>
 </div>

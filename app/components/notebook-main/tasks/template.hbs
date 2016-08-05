@@ -1,5 +1,5 @@
 
-<h3>Tasks</h3>
+<h1>Tasks</h1>
 
 <form {{action "newItem" on="submit"}}>
   {{input placeholder="New task"
@@ -7,8 +7,9 @@
           value=form.content}}
 </form>
 
+
 <h4>To Do</h4>
-<ul>
+<ul class="returned">
   {{#each notebook.items as |item|}}
     {{#unless item.done}}
     {{notebook-main/task-store item=item}}
@@ -17,10 +18,15 @@
 </ul>
 
 <h4>Completed</h4>
-<ul>
+<ul class="returned">
   {{#each notebook.items as |item|}}
     {{#if item.done}}
     {{notebook-main/task-store item=item}}
     {{/if}}
   {{/each}}
 </ul>
+
+<div class="row">
+<span class="col-lg-2 col-lg-offset-5"><a>{{#link-to 'notebook' notebook}}{{fa-icon "fa-book fa-2x"}} <br>
+  Back to Notebook{{/link-to}}</a></span>
+</div>

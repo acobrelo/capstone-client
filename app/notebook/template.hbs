@@ -1,13 +1,17 @@
-
-
+<!--
 {{notebook-main project=model
                 tmp=model.id
                 tasks="seeTasks"
-                bookmarks="seeBookmarks"}}
+                bookmarks="seeBookmarks"}} -->
+<h1>Notebook</h1>
+<h4>This is your notebook where you can keep track of tasks,
+  take notes, and bookmark links. Check back for more features soon!</h4>
+
+<h2>Features:</h2>
+<span {{action "seeTasks" model}}><a><h3>To Do</h3></a></span>
 {{outlet}}
 
-notebookkkkk
-{{model.id}}
-
-<!-- <button {{action "seeTasks" model}} class="btn btn-primary">
-  Tasks</button> -->
+<div class="row">
+<span class="col-lg-2 col-lg-offset-5"><a>{{#link-to 'project' model}}{{fa-icon "fa-book fa-2x"}} <br>
+  Back to Project{{/link-to}}</a></span>
+</div>

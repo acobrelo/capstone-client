@@ -1,10 +1,12 @@
+<div class="auth-forms">
 {{email-input email=credentials.email}}
 {{password-input password=credentials.password}}
+</div>
 
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
-  Sign In
-</button>
+<div class="row">
+<span{{action "reset"}} class="col-md-3 col-md-offset-3">{{#link-to "application"}}<a>{{fa-icon "fa-remove fa-2x"}} <br>
+    Cancel</a>{{/link-to}}</span>
 
-<button class="btn btn-default" {{action "reset"}}>
-  Cancel
-</button>
+<span{{action "submit"}} class="col-md-3"><a>{{fa-icon "fa-user fa-2x"}} <br>
+  Sign In </a></span>
+</div>

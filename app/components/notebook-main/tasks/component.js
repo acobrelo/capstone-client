@@ -16,14 +16,7 @@ export default Ember.Component.extend({
       this.set('form.content', null);
     },
 
-    strike (data) {
-      console.log('what' + data.id);
-      console.log(this.get('item.id'));
 
-      //let item = this.get('store').findRecord('items', data.id);
-      //item.toggleProperty('done');
-      //console.log(this.get('item.id') + "done?");
-    }
   },
 
   //store: Ember.inject.service(),

@@ -6,7 +6,6 @@ export default Ember.Route.extend({
       this.get('store').unloadAll('project');
       this.get('store').findRecord('project', project.id)
       .then((result) => {
-        console.log(result.id);
         this.transitionTo('project', result);
       });
     },

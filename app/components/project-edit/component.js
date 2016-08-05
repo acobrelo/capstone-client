@@ -7,9 +7,9 @@ export default Ember.Component.extend({
       this.sendAction('cancel', project);
     },
 
-    save () {
+    submit () {
       let project = this.get('project');
-      this.sendAction('save', project);
+      this.sendAction('submit', project);
     },
 
      toggleStatus () {

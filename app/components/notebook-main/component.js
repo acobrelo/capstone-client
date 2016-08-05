@@ -8,8 +8,6 @@ export default Ember.Component.extend({
       let data = this.get('project');
       data.tmp = this.get('tmp');
       this.sendAction('tasks', data);
-      console.log('taskTime');
-      console.log(this.get('tmp'));
       //this.transitionTo('notebook/items', params);
     },
 

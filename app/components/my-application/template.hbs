@@ -1,6 +1,7 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    {{navbar-header}}
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid"> -->
+    <!-- {{navbar-header}}
+    {{#link-to "application" class="navbar-brand"}}Home?{{/link-to}}
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav navbar-right">
@@ -14,26 +15,41 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
-
+{{#if isAuthenticated}}
 <div class="container-fluid outlet col-lg-12 col-centered">
   <div class="centered">
+    <div class="landing">
+    <h1>Encore</h1>
+  </div>
   {{outlet}}
   </div>
 </div>
+{{else}}
+<div class="container-fluid outlet col-lg-12 col-centered">
+  <div class="centered">
+  <h1>Encore</h1>
+  <h4>Welcome to Encore, a site for managing your performance projects. Please sign in or sign up to continue!</h4>
+  {{outlet}}
+  </div>
+</div>
+{{/if}}
+
 
 <div class="home">
   <footer class="nav navbar-fixed-bottom">
   <ul>
     {{#if isAuthenticated}}
       <li class="home col-sm-2">{{#link-to 'projects/new'}} {{fa-icon "fa-plus-circle fa-4x"}} <br> New Project{{/link-to}}</li>
-      <li class="home col-sm-2">{{#link-to 'projects'}} {{fa-icon "fa-globe fa-4x"}} <br> All Projects{{/link-to}}</li>
-      <li class="home col-sm-2"><a href="profiles" {{action "seeProfile"}}> {{fa-icon "fa-user fa-4x"}} <br> Profile </a></li>
+      <li class="home col-sm-2">{{#link-to 'projects'}} {{fa-icon "fa-globe fa-4x"}} <br> My Projects{{/link-to}}</li>
       <li class="home col-sm-2">{{#link-to 'projects/ongoing'}} {{fa-icon "fa-spinner fa-4x"}} <br> In Progress Projects{{/link-to}}</li>
       <li class="home col-sm-2">{{#link-to 'projects/done'}} {{fa-icon "fa-check-circle-o fa-4x"}} <br> Completed Projects{{/link-to}}</li>
+      <li class="home col-sm-2"><a href="profiles" {{action "seeProfile"}}> {{fa-icon "fa-user fa-4x"}} <br> Profile </a></li>
+      <li class="home col-sm-2"><a href="#" {{action "signOut"}}> {{fa-icon "fa-power-off fa-4x"}} <br> Sign Out</a></li>
       {{else}}
-      <h1 class="top">Encore</h1>
+      <li class="home col-md-3 col-md-offset-3">{{#link-to "sign-up"}} {{fa-icon "fa-user-plus fa-2x"}} <br> Sign Up{{/link-to}}</li>
+      <li class="home col-md-3">{{#link-to "sign-in"}} {{fa-icon "fa-user fa-2x"}} <br> Sign In{{/link-to}}</li>
     {{/if}}
       <!-- <label for="search">Search</label>
       {{input type="text" value=profile.username placeholder="Artist's name"}} -->

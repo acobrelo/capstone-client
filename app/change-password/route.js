@@ -7,8 +7,7 @@ export default Ember.Route.extend({
   actions: {
     changePassword (passwords) {
       this.get('auth').changePassword(passwords)
-      .then(() => this.get('auth').signOut())
-      .then(() => this.transitionTo('sign-in'))
+      .then(() => this.transitionTo('profiles', this.get('auth.credentials.id')))
       .then(() => {
         this.get('flashMessages')
         .success('Successfully changed your password!');
